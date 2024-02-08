@@ -24,10 +24,14 @@ Must extract and store the following data every day at noon, local time, for Cas
 - The forecasted temperature (in degrees Celsius) for the following day at noon
 
 ### Code 
-Inline ´code`
 
-Indented code 
-   // Comment 
+Syntax Highlighting 
+
+``` sh
+header=$(echo -e "year\tmonth\tday\tobs_temp\tfc_temp")
+echo $header>rx_poc.log
+```
+   
    
 
 
