@@ -43,7 +43,34 @@ curl -s wttr.in/$city?T --output weather_report
 
 
 ```
-   
+
+
+### Extract and load the required data
+Extract only those lines that contain temperatures from the weather report, and save the result to variables representing the temperature output.
+``` sh
+#To extract Current Temperature
+obs_temp=$(curl -s wttr.in/$city?T | grep -m 1 '°.' | grep -Eo -e '-?[[:digit:]].*')
+echo "The current Temperature of $city: $obs_temp"
+
+#Store the current hour, day, month, and year in corresponding shell variables
+hour=$(TZ='Morocco/Casablanca' date -u +%H) 
+day=$(TZ='Morocco/Casablanca' date -u +%d) 
+month=$(TZ='Morocco/Casablanca' date +%m)
+year=$(TZ='Morocco/Casablanca' date +%Y)
+
+# Merge the fields into a tab-delimited record, corresponding to a single row in Table 1
+record=$(echo -e "$year\t$month\t$day\t$obs_temp\t$fc_temp C")
+echo $record>>rx_poc.log
+
+# Determine what time of day to run your script
+
+$ date
+Mon Feb 13 11:28:12 EST 2023
+$ date -u
+Mon Feb 13 16:28:16 UTC 2023
+
+```
+
    
 
 
