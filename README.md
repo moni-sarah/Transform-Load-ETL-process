@@ -30,6 +30,18 @@ Syntax Highlighting
 ``` sh
 header=$(echo -e "year\tmonth\tday\tobs_temp\tfc_temp")
 echo $header>rx_poc.log
+// Create a text file called rx_poc.sh
+touch rx_poc.sh
+// Include the Bash shebang on the first line of rx_poc.sh :
+#! /bin/bash
+// Make script executable by running the following in the terminal:
+chmod u+x rx_poc.sh
+// 2.2. Assign the city name to Casablanca for accessing the weather report:
+city=Casablanca
+// 2.3 Obtain the weather information for Casablanca:
+curl -s wttr.in/$city?T --output weather_report
+
+
 ```
    
    
