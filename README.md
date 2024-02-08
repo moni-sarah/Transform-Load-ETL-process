@@ -16,4 +16,11 @@ For this practice project, I'll use the weather data package provided by the ope
 - Load the data into a log file using a tabular format
 - Schedule the entire process to run automatically at a set time daily
 
+  ## Overview
+  ### Weather reporting tasks
+Must extract and store the following data every day at noon, local time, for Casablanca, Morocco:
+
+- The actual temperature (in degrees Celsius)
+- The forecasted temperature (in degrees Celsius) for the following day at noon 
+
 
