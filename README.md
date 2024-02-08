@@ -21,6 +21,12 @@ For this practice project, I'll use the weather data package provided by the ope
 Must extract and store the following data every day at noon, local time, for Casablanca, Morocco:
 
 - The actual temperature (in degrees Celsius)
-- The forecasted temperature (in degrees Celsius) for the following day at noon 
+- The forecasted temperature (in degrees Celsius) for the following day at noon
+
+### Code 
+Inline "code" 
+Indented code 
+   // Comment 
+   
 
 
