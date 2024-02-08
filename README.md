@@ -24,7 +24,8 @@ Must extract and store the following data every day at noon, local time, for Cas
 - The forecasted temperature (in degrees Celsius) for the following day at noon
 
 ### Code 
-Inline "code" 
+Inline ´code`
+
 Indented code 
    // Comment 
    
